@@ -1,0 +1,22 @@
+# Jaime Rosales - CV
+
+This is a placeholder CV file. Please replace this with your actual CV in PDF format.
+
+## Instructions:
+1. Replace this file with your actual CV/resume in PDF format
+2. Make sure the file is named `cv.pdf` and placed in the `public/` folder
+3. The download link in the portfolio will automatically work once you add your CV
+
+## File Structure:
+```
+public/
+└── cv.pdf  <- Your actual CV goes here
+```
+
+## Alternative:
+If you prefer a different filename, update the link in `app/page.js`:
+```javascript
+<a href="/your-cv-filename.pdf" download>
+  Download CV
+</a>
+``` 
