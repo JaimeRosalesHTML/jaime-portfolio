@@ -22,17 +22,17 @@ export default function Footer() {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/jaime-rosales',
+      href: 'https://github.com/JaimeRosalesHTML',
       icon: Github,
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/jaime-rosales',
+      href: 'https://www.linkedin.com/in/jaimerosales2005',
       icon: Linkedin,
     },
     {
       name: 'Email',
-      href: 'mailto:jaime.rosales@example.com',
+      href: 'mailto:rosalesjaime000@gmail.com',
       icon: Mail,
     },
   ]

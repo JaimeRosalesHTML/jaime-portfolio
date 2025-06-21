@@ -15,8 +15,22 @@ export default function Home() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Contact form submitted')
+    const formData = new FormData(e.target)
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const message = formData.get('message')
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:rosalesjaime000@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`
+    
+    // Open default email client
+    window.open(mailtoLink)
+    
+    // Reset form
+    e.target.reset()
+    
+    // Show success message (you can enhance this with a toast notification)
+    alert('Thank you for your message! Your email client should open with the message ready to send.')
   }
 
   return (
@@ -305,8 +319,8 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Email</h4>
-                    <a href="mailto:jaime.rosales@example.com" className="text-primary-600 dark:text-primary-400 hover:underline">
-                      jaime.rosales@example.com
+                    <a href="mailto:rosalesjaime000@gmail.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+                      rosalesjaime000@gmail.com
                     </a>
                   </div>
                 </div>
