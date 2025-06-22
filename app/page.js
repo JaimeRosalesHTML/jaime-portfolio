@@ -4,33 +4,28 @@ import { motion } from 'framer-motion'
 import { Download, ChevronDown, GraduationCap, Code, Mail, Send } from 'lucide-react'
 import { projects, techStack } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 export default function Home() {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    if (searchParams.get('success')) {
+      setShowSuccessMessage(true)
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [searchParams])
+  
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
-  }
-
-  const handleContactSubmit = (e) => {
-    e.preventDefault()
-    const formData = new FormData(e.target)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const message = formData.get('message')
-    
-    // Create mailto link with form data
-    const mailtoLink = `mailto:rosalesjaime000@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`
-    
-    // Open default email client
-    window.open(mailtoLink)
-    
-    // Reset form
-    e.target.reset()
-    
-    // Show success message (you can enhance this with a toast notification)
-    alert('Thank you for your message! Your email client should open with the message ready to send.')
   }
 
   return (
@@ -240,7 +235,17 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <form onSubmit={handleContactSubmit} className="space-y-6">
+              {showSuccessMessage && (
+                <div className="mb-6 p-4 text-center bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-lg">
+                  <p>Thank you for your message! I'll get back to you soon.</p>
+                </div>
+              )}
+              <form
+                action="https://formspree.io/f/mzzgjbeq"
+                method="POST"
+                className="space-y-6"
+              >
+                <input type="hidden" name="_next" value="/?success=true#contact" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name
