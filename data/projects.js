@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform built with Next.js, featuring user authentication, product management, and payment integration.",
+    description: "This project is for demonstration purposes. The content will be updated.",
     technologies: ["Next.js", "React", "Node.js", "MongoDB", "Stripe"],
     github: "https://github.com/jaime-rosales/ecommerce-platform",
     demo: "https://ecommerce-demo.vercel.app",
@@ -11,7 +11,7 @@ export const projects = [
   {
     id: 2,
     title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    description: "This project is for demonstration purposes. The content will be updated.",
     technologies: ["React", "Firebase", "TailwindCSS", "Framer Motion"],
     github: "https://github.com/jaime-rosales/task-manager",
     demo: "https://task-manager-demo.vercel.app",
@@ -20,7 +20,7 @@ export const projects = [
   {
     id: 3,
     title: "Weather Dashboard",
-    description: "A weather application that displays current weather conditions and forecasts using OpenWeatherMap API with beautiful UI design.",
+    description: "This project is for demonstration purposes. The content will be updated.",
     technologies: ["JavaScript", "HTML", "CSS", "OpenWeatherMap API"],
     github: "https://github.com/jaime-rosales/weather-dashboard",
     demo: "https://weather-dashboard-demo.vercel.app",
@@ -29,7 +29,7 @@ export const projects = [
   {
     id: 4,
     title: "Portfolio Website",
-    description: "A responsive portfolio website built with modern web technologies, featuring smooth animations and clean design.",
+    description: "This project is for demonstration purposes. The content will be updated.",
     technologies: ["Next.js", "TailwindCSS", "Framer Motion"],
     github: "https://github.com/jaime-rosales/portfolio",
     demo: "https://portfolio-demo.vercel.app",
@@ -38,7 +38,7 @@ export const projects = [
   {
     id: 5,
     title: "Blog Platform",
-    description: "A content management system for blogs with markdown support, user authentication, and admin dashboard.",
+    description: "This project is for demonstration purposes. The content will be updated.",
     technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth.js"],
     github: "https://github.com/jaime-rosales/blog-platform",
     demo: "https://blog-platform-demo.vercel.app",
@@ -47,7 +47,7 @@ export const projects = [
   {
     id: 6,
     title: "Chat Application",
-    description: "Real-time chat application with user authentication, message history, and file sharing capabilities.",
+    description: "This project is for demonstration purposes. The content will be updated.",
     technologies: ["React", "Socket.io", "Express", "MongoDB"],
     github: "https://github.com/jaime-rosales/chat-app",
     demo: "https://chat-app-demo.vercel.app",

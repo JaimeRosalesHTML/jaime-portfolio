@@ -12,14 +12,12 @@ export default function ProjectCard({ project }) {
       whileHover={{ y: -5 }}
       className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
     >
-      {/* Project Image Placeholder */}
       <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
         <div className="text-white text-4xl font-bold opacity-80">
           {project.title.charAt(0)}
         </div>
       </div>
 
-      {/* Project Content */}
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
           {project.title}
@@ -29,7 +27,6 @@ export default function ProjectCard({ project }) {
           {project.description}
         </p>
 
-        {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech, index) => (
             <span
@@ -41,7 +38,6 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
 
-        {/* Project Links */}
         <div className="flex gap-3">
           <motion.a
             href={project.github}
