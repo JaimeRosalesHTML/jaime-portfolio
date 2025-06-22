@@ -245,7 +245,7 @@ export default function Home() {
                 method="POST"
                 className="space-y-6"
               >
-                <input type="hidden" name="_next" value="/?success=true#contact" />
+                <input type="hidden" name="_redirect" value="https://jaimerosales.dev/thanks" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name
