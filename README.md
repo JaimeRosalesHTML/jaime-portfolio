@@ -1,22 +1,28 @@
-# Jaime Rosales - Developer Portfolio
+# Jaime Rosales - Student Developer Portfolio
 
-This is my personal developer portfolio, built with Next.js and TailwindCSS. The live version is deployed on Vercel at [jaimerosales.dev](https://jaimerosales.dev).
+Hey there! I'm Jaime, a Computer Science student at Griffith College who's passionate about web development. This is my portfolio website where I showcase the projects I've built while learning to code.
 
-## Features
+## What I'm Learning Right Now
+- React hooks and state management
+- Building full-stack applications with Next.js
+- Database design and MySQL
+- Object-oriented programming in Java
+- Git workflow and collaboration
 
-- **About Me**: A section to introduce myself, my journey, and my skills.
-- **Projects**: A showcase of my work with links to live demos and GitHub repositories.
-- **Contact Form**: A functional contact form using Formspree for easy communication.
-- **Thank You Page**: A custom "Thank You" page to confirm successful form submissions.
-- **Responsive Design**: The entire site is fully responsive, providing a great user experience on all devices.
-- **Performance**: Built with Next.js for a fast and optimized experience.
+## My Projects
+These are real projects I've built while learning. They're not perfect, but each one taught me something new!
+
+- **Kixx Fradag App**: Order management system for local businesses in Bolivia
+- **Majo Cosmetics Store**: E-commerce site with Stripe payments
+- **Book Collection HashMap**: Java project working with data structures
+- **Java OOP Project**: University assignment on abstract classes and interfaces
 
 ## Tech Stack
-
-- **Framework**: Next.js 14
-- **Styling**: TailwindCSS
-- **Animations**: Framer Motion
-- **Deployment**: Vercel
+- **Frontend**: React, Next.js, TailwindCSS
+- **Backend**: Node.js (learning), Java
+- **Databases**: MySQL
+- **Tools**: Git, VS Code
+- **Currently Learning**: TypeScript, more advanced Node.js concepts
 
 ## Getting Started
 
@@ -45,6 +51,7 @@ To run a local copy of this project, follow these steps:
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## Contact
+I'm always looking for feedback on my code and opportunities to learn from more experienced developers. Feel free to reach out!
 
 - **Email**: rosalesjaime000@gmail.com
 - **GitHub**: [@JaimeRosalesHTML](https://github.com/JaimeRosalesHTML)

@@ -1,71 +1,51 @@
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "This project is for demonstration purposes. The content will be updated.",
-    technologies: ["Next.js", "React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/jaime-rosales/ecommerce-platform",
-    demo: "https://ecommerce-demo.vercel.app",
-    image: "/images/project1.jpg"
+    title: "Kixx Fradag App",
+    description: "Order and inventory management system for lubricant distributors in Bolivia. Built with Next.js and Tailwind CSS, it helps small businesses track product flow and organize orders efficiently.",
+    tech: ["Next.js", "Tailwind CSS", "MySQL"],
+    github: "https://github.com/JaimeRosalesHTML/kixx-app",
+    demo: null,
+    image: "/images/kixxfradag.png"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "This project is for demonstration purposes. The content will be updated.",
-    technologies: ["React", "Firebase", "TailwindCSS", "Framer Motion"],
-    github: "https://github.com/jaime-rosales/task-manager",
-    demo: "https://task-manager-demo.vercel.app",
-    image: "/images/project2.jpg"
+    title: "Majo Cosmetics Store",
+    description: "E-commerce platform for importing U.S. beauty products to Bolivia. Features Stripe payments, product catalog, responsive UI, and order tracking.",
+    tech: ["Next.js", "TailwindCSS", "Stripe"],
+    github: "https://github.com/JaimeRosalesHTML/majo-cosmetics-web",
+    demo: "https://majo-cosmetics-web.vercel.app",
+    image: "/images/majocosmetics.png"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "This project is for demonstration purposes. The content will be updated.",
-    technologies: ["JavaScript", "HTML", "CSS", "OpenWeatherMap API"],
-    github: "https://github.com/jaime-rosales/weather-dashboard",
-    demo: "https://weather-dashboard-demo.vercel.app",
-    image: "/images/project3.jpg"
+    title: "Book Collection HashMap",
+    description: "Java desktop app that uses HashMaps to organize books from CSV files. Includes filters and a GUI to demonstrate data structures and file I/O logic.",
+    tech: ["Java"],
+    github: "https://github.com/JaimeRosalesHTML/book-collection-hashmap",
+    demo: null,
+    image: "/images/bookcollectionhashmap.jpg"
   },
   {
     id: 4,
-    title: "Portfolio Website",
-    description: "This project is for demonstration purposes. The content will be updated.",
-    technologies: ["Next.js", "TailwindCSS", "Framer Motion"],
-    github: "https://github.com/jaime-rosales/portfolio",
-    demo: "https://portfolio-demo.vercel.app",
-    image: "/images/project4.jpg"
-  },
-  {
-    id: 5,
-    title: "Blog Platform",
-    description: "This project is for demonstration purposes. The content will be updated.",
-    technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth.js"],
-    github: "https://github.com/jaime-rosales/blog-platform",
-    demo: "https://blog-platform-demo.vercel.app",
-    image: "/images/project5.jpg"
-  },
-  {
-    id: 6,
-    title: "Chat Application",
-    description: "This project is for demonstration purposes. The content will be updated.",
-    technologies: ["React", "Socket.io", "Express", "MongoDB"],
-    github: "https://github.com/jaime-rosales/chat-app",
-    demo: "https://chat-app-demo.vercel.app",
-    image: "/images/project6.jpg"
+    title: "Java OOP: Abstract Interfaces",
+    description: "University project focused on abstract classes, polymorphism, and interface use in Java. Demonstrates real-world application of OOP principles through database simulation.",
+    tech: ["Java"],
+    github: "https://github.com/JaimeRosalesHTML/java-opp-abstract-interfaces",
+    demo: null,
+    image: "/images/java interfaces.png"
   }
 ];
 
 export const techStack = [
   { name: "JavaScript", icon: "javascript" },
+  { name: "HTML/CSS", icon: "html" },
   { name: "React", icon: "react" },
   { name: "Next.js", icon: "nextjs" },
-  { name: "Node.js", icon: "nodejs" },
-  { name: "TypeScript", icon: "typescript" },
-  { name: "Python", icon: "python" },
-  { name: "MongoDB", icon: "mongodb" },
-  { name: "PostgreSQL", icon: "postgresql" },
+  { name: "Java", icon: "java" },
+  { name: "MySQL", icon: "mysql" },
   { name: "TailwindCSS", icon: "tailwind" },
   { name: "Git", icon: "git" },
-  { name: "Docker", icon: "docker" },
-  { name: "AWS", icon: "aws" }
+  { name: "Learning: Node.js", icon: "nodejs" },
+  { name: "Learning: TypeScript", icon: "typescript" }
 ]; 

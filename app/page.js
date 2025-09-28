@@ -36,7 +36,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
@@ -45,7 +45,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Full-stack developer passionate about creating innovative web solutions and turning ideas into reality.
+              3rd Year Computer Science student at Griffith College Dublin, passionate about web development and actively seeking internship opportunities to apply technical skills and learn from real-world challenges.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -59,8 +59,8 @@ export default function Home() {
               </motion.button>
               
               <motion.a
-                href="/cv.pdf"
-                download
+                href="/Jaime-Rosales-CV.pdf"
+                download="Jaime-Rosales-CV.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary"
@@ -87,14 +87,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               About Me
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I'm a Computer Science student at Griffith College with a passion for full-stack development and creating impactful web applications.
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-[65ch] mx-auto">
+              I'm a 3rd Year Computer Science student at Griffith College Dublin focused on web development. I've built real-world projects (an e-commerce site and an order management system) and I'm open to internship opportunities to apply my skills and keep learning.
             </p>
           </motion.div>
 
@@ -104,16 +104,13 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 My Journey
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                I'm currently pursuing my Computer Science degree at Griffith College, where I'm developing a strong foundation in software development principles, algorithms, and data structures. My focus is on full-stack development, where I enjoy working on both frontend and backend technologies to create complete, user-friendly applications.
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                I'm passionate about learning new technologies and best practices, and I love collaborating with others to solve complex problems. When I'm not coding, you can find me exploring new frameworks, contributing to open-source projects, or working on personal projects that challenge my skills.
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-[15px] sm:text-base space-y-3">
+                I started building for the web by shipping small projects and quickly moved into real use cases: an e-commerce store with Stripe and an order & inventory system for a local distributor. Recently I've been deepening React/Next.js and databases, writing cleaner code, and collaborating through GitHub. I'm actively looking for an internship where I can contribute, learn from a team, and grow as a software engineer.
               </p>
 
               {/* Education */}
@@ -133,10 +130,10 @@ export default function Home() {
                 <Code className="text-primary-500" size={24} />
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white">
-                    Full-Stack Development
+                    Open To
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Focus on modern web technologies
+                    Internship Opportunities
                   </p>
                 </div>
               </div>
@@ -147,28 +144,138 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Tech Stack
               </h3>
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
-                {techStack.map((tech, index) => (
-                  <motion.div
-                    key={tech.name}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-center hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-200"
-                  >
-                    <div className="text-2xl mb-2">🚀</div>
-                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {tech.name}
-                    </p>
-                  </motion.div>
-                ))}
+              <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-6 justify-items-center max-w-5xl mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="56" height="56" alt="Next.js" className="filter dark:invert" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="56" height="56" alt="JavaScript" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.3 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="56" height="56" alt="TypeScript" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.4 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="56" height="56" alt="Python" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="56" height="56" alt="Java" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.6 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="56" height="56" alt="React" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.7 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="56" height="56" alt="HTML5" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.8 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="56" height="56" alt="CSS3" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.9 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="56" height="56" alt="Bash" className="filter dark:invert" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 1.0 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="56" height="56" alt="MySQL" className="filter dark:invert" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 1.1 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="56" height="56" alt="Figma" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 1.2 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="56" height="56" alt="Git" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 1.3 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="56" height="56" alt="GitHub" className="filter dark:invert" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 1.4 }}
+                  className="p-3 transition-transform duration-150 ease-out hover:scale-110"
+                >
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" width="56" height="56" alt="NPM" />
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -182,7 +289,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -200,7 +307,8 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="transition-transform duration-150 ease-out hover:scale-105"
               >
                 <ProjectCard project={project} />
               </motion.div>
@@ -216,7 +324,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -233,7 +341,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
               {showSuccessMessage && (
                 <div className="mb-6 p-4 text-center bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-lg">
@@ -305,7 +413,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="space-y-8"
             >
               <div>
@@ -345,8 +453,8 @@ export default function Home() {
                     <Code className="text-primary-600 dark:text-primary-400" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white">Focus</h4>
-                    <p className="text-gray-600 dark:text-gray-300">Full-Stack Development</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Open To</h4>
+                    <p className="text-gray-600 dark:text-gray-300">Internship Opportunities</p>
                   </div>
                 </div>
               </div>
