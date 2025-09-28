@@ -1,32 +1,50 @@
-'use client'
+/**
+ * @fileoverview Main portfolio page component
+ * @author Jaime Rosales
+ * @created 2024
+ * @description Homepage showcasing projects, skills, and contact information
+ * @course Computer Science - Griffith College Dublin
+ */
 
-import { motion } from 'framer-motion'
-import { Download, ChevronDown, GraduationCap, Code, Mail, Send } from 'lucide-react'
-import { projects, techStack } from '../data/projects'
-import ProjectCard from '../components/ProjectCard'
-import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+'use client';
 
+import { motion } from 'framer-motion';
+import { Download, ChevronDown, GraduationCap, Code, Mail, Send } from 'lucide-react';
+import { projects } from '../data/projects';
+import ProjectCard from '../components/ProjectCard';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+
+/**
+ * Main portfolio homepage component
+ * @returns {JSX.Element} Complete portfolio page
+ */
 export default function Home() {
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
-  const searchParams = useSearchParams()
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const searchParams = useSearchParams();
 
+  // Handle contact form success redirect
   useEffect(() => {
     if (searchParams.get('success')) {
-      setShowSuccessMessage(true)
+      setShowSuccessMessage(true);
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, [searchParams])
+  }, [searchParams]);
   
+  /**
+   * Smooth scroll to a specific section
+   * @param {string} sectionId - ID of the section to scroll to
+   */
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   return (
     <div className="min-h-screen">
@@ -157,7 +175,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.1 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="56" height="56" alt="Next.js" className="filter dark:invert" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width={56} height={56} alt="Next.js" className="filter dark:invert" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -166,7 +184,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.2 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="56" height="56" alt="JavaScript" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width={56} height={56} alt="JavaScript" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -175,7 +193,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.3 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="56" height="56" alt="TypeScript" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width={56} height={56} alt="TypeScript" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -184,7 +202,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.4 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="56" height="56" alt="Python" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width={56} height={56} alt="Python" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -193,7 +211,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.5 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="56" height="56" alt="Java" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width={56} height={56} alt="Java" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -202,7 +220,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.6 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="56" height="56" alt="React" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width={56} height={56} alt="React" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -211,7 +229,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.7 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="56" height="56" alt="HTML5" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width={56} height={56} alt="HTML5" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -220,7 +238,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.8 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="56" height="56" alt="CSS3" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width={56} height={56} alt="CSS3" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -229,7 +247,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 0.9 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="56" height="56" alt="Bash" className="filter dark:invert" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width={56} height={56} alt="Bash" className="filter dark:invert" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -238,7 +256,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 1.0 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="56" height="56" alt="MySQL" className="filter dark:invert" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width={56} height={56} alt="MySQL" className="filter dark:invert" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -247,7 +265,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 1.1 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="56" height="56" alt="Figma" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width={56} height={56} alt="Figma" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -256,7 +274,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 1.2 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="56" height="56" alt="Git" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width={56} height={56} alt="Git" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -265,7 +283,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 1.3 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="56" height="56" alt="GitHub" className="filter dark:invert" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width={56} height={56} alt="GitHub" className="filter dark:invert" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -274,7 +292,7 @@ export default function Home() {
                   transition={{ duration: 0.3, delay: 1.4 }}
                   className="p-3 transition-transform duration-150 ease-out hover:scale-110"
                 >
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" width="56" height="56" alt="NPM" />
+                  <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" width={56} height={56} alt="NPM" />
                 </motion.div>
               </div>
             </motion.div>
