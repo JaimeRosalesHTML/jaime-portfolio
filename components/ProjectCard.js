@@ -1,12 +1,26 @@
-'use client'
+/**
+ * @fileoverview Project card component for displaying portfolio projects
+ * @author Jaime Rosales
+ * @created 2024
+ * @description Reusable card component with image fallback and hover animations
+ * @course Computer Science - Griffith College Dublin
+ */
 
-import { motion } from 'framer-motion'
-import { Github, ExternalLink, Code } from 'lucide-react'
-import Image from 'next/image'
-import { useState } from 'react'
+'use client';
 
+import { motion } from 'framer-motion';
+import { Github, ExternalLink, Code } from 'lucide-react';
+import Image from 'next/image';
+import { useState } from 'react';
+
+/**
+ * Project card component with image fallback and interactive elements
+ * @param {Object} props - Component props
+ * @param {Object} props.project - Project data object
+ * @returns {JSX.Element} Project card JSX
+ */
 export default function ProjectCard({ project }) {
-  const [imageError, setImageError] = useState(false)
+  const [imageError, setImageError] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

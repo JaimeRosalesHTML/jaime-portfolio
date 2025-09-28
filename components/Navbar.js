@@ -1,37 +1,56 @@
-'use client'
+/**
+ * @fileoverview Navigation bar component with theme toggle and mobile menu
+ * @author Jaime Rosales
+ * @created 2024
+ * @description Responsive navigation with smooth scrolling and dark mode toggle
+ * @course Computer Science - Griffith College Dublin
+ */
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { Menu, X, Sun, Moon, ChevronUp } from 'lucide-react'
-import { useTheme } from './ThemeProvider'
+'use client';
 
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from './ThemeProvider';
+import Image from 'next/image';
+
+/**
+ * Navigation bar component with responsive design and theme toggle
+ * @returns {JSX.Element} Navigation bar JSX
+ */
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const { darkMode, toggleDarkMode } = useTheme()
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { darkMode, toggleDarkMode } = useTheme();
 
+  // Track scroll position for navbar styling
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
+  // Navigation menu items
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
-  ]
+  ];
 
+  /**
+   * Smooth scroll to section and close mobile menu
+   * @param {string} href - Section selector to scroll to
+   */
   const scrollToSection = (href) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
     <motion.nav
@@ -50,9 +69,11 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <img 
+            <Image 
               src="/images/cat-favicon.png" 
               alt="Jaime Rosales" 
+              width={32}
+              height={32}
               className="h-8 w-8 rounded-full"
             />
           </motion.div>
@@ -79,6 +100,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.9 }}
               onClick={toggleDarkMode}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
@@ -86,6 +108,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>

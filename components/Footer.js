@@ -1,24 +1,41 @@
-'use client'
+/**
+ * @fileoverview Footer component with social links and scroll-to-top functionality
+ * @author Jaime Rosales
+ * @created 2024
+ * @description Site footer with navigation links, social media, and scroll button
+ * @course Computer Science - Griffith College Dublin
+ */
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, ChevronUp } from 'lucide-react'
+'use client';
 
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail, ChevronUp } from 'lucide-react';
+
+/**
+ * Footer component with social links and scroll-to-top button
+ * @returns {JSX.Element} Footer JSX
+ */
 export default function Footer() {
-  const [showScrollTop, setShowScrollTop] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
+  // Show scroll-to-top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
+  /**
+   * Smooth scroll to top of page
+   */
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
+  // Social media links configuration
   const socialLinks = [
     {
       name: 'GitHub',
@@ -35,7 +52,7 @@ export default function Footer() {
       href: 'mailto:rosalesjaime000@gmail.com',
       icon: Mail,
     },
-  ]
+  ];
 
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white">
@@ -89,6 +106,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                   className="p-3 bg-gray-800 hover:bg-primary-600 rounded-lg transition-colors duration-200"
+                  aria-label={`Visit ${social.name} profile`}
                 >
                   <social.icon size={20} />
                 </motion.a>
@@ -113,6 +131,7 @@ export default function Footer() {
           exit={{ opacity: 0, scale: 0 }}
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 p-3 bg-primary-500 hover:bg-primary-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50"
+          aria-label="Scroll to top"
         >
           <ChevronUp size={24} />
         </motion.button>
